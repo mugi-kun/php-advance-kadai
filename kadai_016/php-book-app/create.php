@@ -11,7 +11,7 @@ if(isset($_POST['submit'])) {
     // 動的に変わる値をプレースホルダに置き換えたINSERT文をあらかじめ用紙する
     $sql_insert = '
     INSERT INTO books (book_code, book_name, price, stock_quantity, genre_code)
-    VALUES (:book_code, :book_name, :price, :stock_quantity, :book_code)
+    VALUES (:book_code, :book_name, :price, :stock_quantity, :genre_code)
     ';
     $stmt_insert = $pdo->prepare($sql_insert);
 
